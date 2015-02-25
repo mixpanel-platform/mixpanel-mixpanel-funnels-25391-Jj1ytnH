@@ -19,7 +19,10 @@
         var propSelect  = $('#propSelect').MPPropertySelect();
         var dateSelect  = $('#dateSelect').MPDatepicker();
         var eventGraph  = $('#graph').MPChart({chartType: 'line'});
-        var eventTable  = $('#table').MPTable();
+        var eventTable  = $('#table').MPTable({
+          showPercentages: true,
+          firstColHeader: 'Event'
+        });
 
         var runQuery = function() {
           var eventName = eventSelect.MPEventSelect('value'),
